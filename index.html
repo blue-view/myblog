@@ -16,14 +16,15 @@
   </style>
 </head>
 <body>
-  <div id="content"></div>
+  <div id="content">
+  # Marked in browser\n\nRendered by **marked**.\n
+    <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=516113541,3984889230&fm=23&gp=0.jpg">
+  </div>
   <script>
-    var html=
-    `# Marked in browser\n\nRendered by **marked**.\n
-![](https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=516113541,3984889230&fm=23&gp=0.jpg)
-
-`
-   document.getElementById('content').innerHTML =      marked(html);
+    var content= document.getElementById('content');
+    var markdown=content.innerHTML;
+    var html=marked(markdown);
+      content.innerHTML=HTML
   </script>
 </body>
 </html>
