@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		这是内容
-	</body>
+<head>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>JS Bin</title>
+  <script src="//cdn.bootcss.com/marked/0.3.6/marked.js"></script>
+  <link rel="stylesheet" href="http://typo.sofi.sh/typo.css">
+  <style>
+    body{
+      padding:16px;  
+    }
+    img{
+      max-width:100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+  <script>
+    var html=
+    `# Marked in browser\n\nRendered by **marked**.\n
+![](https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=516113541,3984889230&fm=23&gp=0.jpg)
+
+`
+   document.getElementById('content').innerHTML =      marked(html);
+  </script>
+</body>
 </html>
